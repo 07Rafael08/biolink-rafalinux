@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Bio - RafaLinux</title>
+</head>
+
+<body>
+  <div id="vanta-bg"></div>
+  <main id="pg-p">
+    <img class="icon-p" src="./assets/perfil.jpg" alt="Logo Perfil">
+    <h1 class="nick-t">RafaLinux</h1>
+    <section class="links-box">
+      <ul class="links">
+        <li onclick="discord()" class="link">
+          <img width="30" src="./assets/discord.svg" alt="discord">
+          Discord
+        </li>
+        <li onclick="twitter()" class="link">
+          <img width="20" src="./assets/twiiter.svg" alt="twitter">
+          Twitter
+        </li>
+        <li onclick="github()" class="link">
+          <img width="25" src="./assets/github.svg" alt="github">
+          Github
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      VANTA.BIRDS({
+        el: "#vanta-bg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: true,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        backgroundAlpha: 0.0,
+        color1: 0xff69,
+        color2: 0x78ff00,
+        wingSpan: 40.0,
+        separation: 100.0,
+        alignment: 77.0,
+        cohesion: 5.0,
+        quantity: 2.0,
+      });
+    });
+
+    setTimeout(() => {
+          const main = document.querySelector("main");
+          const footer = document.querySelector("footer");
+          main.style.opacity = 1;
+          main.style.filter = "blur(0px)";
+          footer.style.opacity = 1;
+          footer.style.filter = "blur(0px)";
+        }, 700);
+
+    function discord() {
+      open('https://discord.com/users/680585434535165969/')
+    }
+    function twitter() {
+      open('https://x.com/07fael08/')
+    }
+    function github() {
+      open('https://github.com/07Rafael08/')
+    }
+  </script>
+</body>
+</html>
